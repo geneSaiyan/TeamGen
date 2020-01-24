@@ -1,0 +1,26 @@
+{
+  "name": "teamgen",
+  "version": "1.0.0",
+  "description": "Software developer team generator command line application.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geneSaiyan/TeamGen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geneSaiyan/TeamGen/issues"
+  },
+  "homepage": "https://github.com/geneSaiyan/TeamGen#readme",
+  "dependencies": {
+    "inquirer": "^7.0.3",
+    "jest": "^25.1.0"
+  }
+}
