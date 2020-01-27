@@ -1,40 +1,15 @@
 const inquirer = require("inquirer");
+const TeamPrompt = require("./lib/TeamPrompt");
 const Manager = require("./lib/Manager");
 
+var teamPrompt = new TeamPrompt();
+
+
 inquirer
-    //Prompt user to enter a github username and favorite color
-    .prompt([
-        {
-            type: "input",
-            message: "Enter Manager Name:",
-            name: "managerName"
-        },
-        {
-            type: "input",
-            message: "Enter Manager ID:",
-            name: "managerId"
-        },
-        {
-            type: "input",
-            message: "Enter Manager Title:",
-            name: "managerTitle"
-        },
-        {
-            type: "input",
-            message: "Enter Manager Email:",
-            name: "managerEmail"
-        },
-        {
-            type: "input",
-            message: "Enter Manager Office Number:",
-            name: "managerOfficeNumber"
-        },
-        {
-            type: "input",
-            message: "How many team members?",
-            name: "teamMemberCount"
-        }
-    ])
+    //Ask for manager info first
+    .prompt(
+        [getManager()
+        ])
     .then(function (response) {
         console.log(response)
     })
